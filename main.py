@@ -37,6 +37,7 @@ class QuizBrain:
             user_answer = self.next_question()
             self.check_answer(user_answer, self.question_list[self.question_number - 1].get_answer())
         print("You've completed the quiz.")
+        print(f"Your final score was: {self.score}/{self.question_number}")
     
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
